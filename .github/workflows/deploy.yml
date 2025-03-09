@@ -25,14 +25,9 @@ jobs:
         source venv/bin/activate
         pip install -r requirements.txt
 
-    - name: Login to Azure
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-
     - name: Deploy to Azure App Service
       uses: azure/webapps-deploy@v2
-       with:
+      with:
         app-name: 'easybox-app'  # Nome do seu App Service no Azure
         slot-name: 'production'  # Nome do slot de deploy (opcional)
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}  # Segredo com o perfil de publicação
