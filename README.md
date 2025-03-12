@@ -1,30 +1,39 @@
 # EasyBox: Automação de Processos de Retirada de Pedidos com Integração em Nuvem e IoT
 
-O **EasyBox** é uma solução inovadora que automatiza o processo de retirada de pedidos em restaurantes e estabelecimentos comerciais, utilizando armários inteligentes e integração em nuvem com a Microsoft Azure. O sistema oferece notificações em tempo real, gerenciamento de pedidos e integração com aplicativos de entrega, como Uber Eats e iFood.
+## Visão Geral
 
----
+O **EasyBox** é uma solução inovadora que automatiza o processo de retirada de pedidos em restaurantes e outros pontos de retirada, como prédios comerciais e escolas. A solução integra-se com aplicativos de entrega (como Uber Eats e iFood), oferece visibilidade em tempo real sobre o status dos pedidos e utiliza armários inteligentes (Smart Lockers) para garantir uma experiência rápida e segura para clientes e entregadores.
 
-## 🚀 Funcionalidades Principais
+## Objetivos
 
-- **Integração com Aplicativos de Entrega:** Receba pedidos diretamente de aplicativos como Uber Eats e iFood.
-- **Armários Inteligentes:** Armários modulares com abertura via QR Code ou cartão RFID.
-- **Notificações em Tempo Real:** Envio de SMS, e-mail ou push para clientes e entregadores.
-- **Gerenciamento Centralizado:** Interface web para gerenciamento de pedidos e armários.
-- **Expansão para Múltiplos Locais:** Instalação de armários em restaurantes, prédios comerciais e escolas.
+- **Automatizar o processo de retirada de pedidos**, reduzindo atrasos e erros.
+- **Integrar-se com aplicativos de entrega** para facilitar o gerenciamento de pedidos.
+- **Fornecer visibilidade em tempo real** sobre o status dos pedidos.
+- **Expandir o alcance do mercado** para pontos estratégicos, como prédios comerciais e escolas.
+- **Aumentar a visibilidade da marca** através de um monitor com propaganda e QR Code para o cardápio online.
 
----
+## Tecnologias Utilizadas
 
-## 🛠️ Tecnologias Utilizadas
+- **Backend**: Python (Flask/FastAPI)
+- **Frontend**: React ou Angular
+- **Banco de Dados**: Azure SQL Database
+- **IoT**: Azure IoT Hub para comunicação com armários inteligentes
+- **Nuvem**: Microsoft Azure (App Service, Azure Functions, Logic Apps, etc.)
+- **Integrações**: APIs de aplicativos de entrega (Uber Eats, iFood)
+- **Notificações**: Azure Logic Apps ou SendGrid para envio de SMS/e-mail
 
-- **Backend:** Python (Flask/FastAPI)
-- **Frontend:** React.js (ou Angular/Vue.js)
-- **Banco de Dados:** Azure SQL Database
-- **IoT:** Azure IoT Hub
-- **Armazenamento:** Azure Blob Storage
-- **Notificações:** Azure Logic Apps e SendGrid
-- **Autenticação:** Azure Active Directory (Azure AD)
-- **Monitoramento:** Azure Monitor
+## Como Configurar o Ambiente
 
----
+### Pré-requisitos
 
-## 📂 Estrutura do Projeto
+- Python 3.9
+- Docker
+- Conta na Microsoft Azure
+- Git
+
+### Passos para Configuração
+
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/luiscarlosdesouza/easybox.git
+   cd easybox
