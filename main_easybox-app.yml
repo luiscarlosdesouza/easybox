@@ -1,0 +1,37 @@
+name: Deploy to Azure App Service
+
+on:
+  push:
+    branches:
+      - main  # Altere para o nome da sua branch principal
+  workflow_dispatch:  # Permite acionar o workflow manualmente
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'  # Altere para a versão do Python que você está usando
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Deploy to Azure App Service
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'easybox-app'  # Nome do seu App Service no Azure
+        slot-name: 'production'  # Nome do slot de deploy (opcional)
