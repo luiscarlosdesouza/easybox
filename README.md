@@ -45,3 +45,7 @@ O **EasyBox** é uma solução inovadora que automatiza o processo de retirada d
    ```bash
    git clone https://github.com/luiscarlosdesouza/easybox.git
    cd easybox
+
+## Contato
+
+Para mais informações, consulte o arquivo de contato: [CONTACT.md](CONTACT.md).
