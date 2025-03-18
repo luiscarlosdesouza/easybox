@@ -46,6 +46,10 @@ O **EasyBox** é uma solução inovadora que automatiza o processo de retirada d
    git clone https://github.com/luiscarlosdesouza/easybox.git
    cd easybox
 
+### Estrutura do Projeto
+
+![Estrutura do EasyBox](https://thankful-sky-0e2c3a800.6.azurestaticapps.net/images/estrutura_projeto.png)
+
 ## Contato
 
 Para mais informações, consulte o arquivo de contato: [CONTACT.md](CONTACT.md).
