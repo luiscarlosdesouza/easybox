@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBox Admin - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="logo">
+            <img src="assets/logo.png" alt="EasyBox Logo">
+            <h1>EasyBox Admin</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#pedidos">Pedidos</a></li>
+                <li><a href="#armarios">Armários</a></li>
+                <li><a href="#historico">Histórico</a></li>
+                <li><a href="#configuracoes">Configurações</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile">
+            <span>Bem-vindo, Admin</span>
+            <button id="logout">Sair</button>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Seção de Pedidos -->
+        <section id="pedidos" class="section">
+            <h2>Pedidos Ativos</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Pedido #123</h3>
+                    <p>Status: Pendente</p>
+                    <button class="btn-accept" onclick="aceitarPedido(123)">Aceitar</button>
+                    <button class="btn-reject" onclick="rejeitarPedido(123)">Rejeitar</button>
+                </div>
+                <div class="card">
+                    <h3>Pedido #124</h3>
+                    <p>Status: Aceito</p>
+                    <button class="btn-open" onclick="abrirArmario(124)">Abrir Armário</button>
+                </div>
+                <!-- Mais pedidos serão carregados dinamicamente -->
+            </div>
+        </section>
+
+        <!-- Seção de Armários -->
+        <section id="armarios" class="section">
+            <h2>Gerenciar Armários</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Armário #01</h3>
+                    <p>Status: Disponível</p>
+                    <button class="btn-remove" onclick="removerArmario(1)">Remover</button>
+                </div>
+                <div class="card">
+                    <h3>Armário #02</h3>
+                    <p>Status: Ocupado</p>
+                    <button class="btn-open" onclick="abrirArmario(2)">Abrir Remotamente</button>
+                </div>
+                <!-- Mais armários serão carregados dinamicamente -->
+            </div>
+            <button id="adicionar-armario" class="btn-add">Adicionar Armário</button>
+        </section>
+
+        <!-- Seção de Histórico -->
+        <section id="historico" class="section">
+            <h2>Histórico de Pedidos</h2>
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                        <th>Armário</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>123</td>
+                        <td>10-03-2025</td>
+                        <td>Concluído</td>
+                        <td>Armário #01</td>
+                    </tr>
+                    <tr>
+                        <td>124</td>
+                        <td>15-03-2025</td>
+                        <td>Cancelado</td>
+                        <td>Armário #02</td>
+                    </tr>
+                    <!-- Mais registros serão carregados dinamicamente -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2025 EasyBox Admin. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
